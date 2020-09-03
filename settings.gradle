@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "PlashSpeed_V1.2"

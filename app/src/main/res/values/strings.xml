@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RegistrationLogin</string>
+    <string name="help_details">Do let us know and we will help you any way that we can.</string>
+    <string name="help_title">Facing a problem?</string>
+    <string name="topic_title">Topic</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="contact_title">Contact</string>
+    <string name="contact_details">Let us contact you</string>
+    <string name="name_title">Name</string>
+    <string name="email_title">Email</string>
+</resources>
