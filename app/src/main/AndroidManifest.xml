@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".HelpMessage"></activity>
+        <activity android:name=".DeliveryActivity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">

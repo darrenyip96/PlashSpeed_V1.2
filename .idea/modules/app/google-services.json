@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "384517490162-r6ruqdjnuh5nad79m6oe7vu92jtsjmmp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plashspeed_v12",
+            "certificate_hash": "2c7579a2056bdf8edc8962fd63c29393d06ab88f"
+          }
+        },
+        {
           "client_id": "384517490162-0jkunp37e0954qhtsa47qem87lden8sd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
