@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "384517490162",
+    "firebase_url": "https://plashspeed-v1.firebaseio.com",
+    "project_id": "plashspeed-v1",
+    "storage_bucket": "plashspeed-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384517490162:android:f70f5fc5297dae3400976b",
+        "android_client_info": {
+          "package_name": "com.example.plashspeed_v12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384517490162-0jkunp37e0954qhtsa47qem87lden8sd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plashspeed_v12",
+            "certificate_hash": "86f861e8144852720eb76955781257e1866d56d0"
+          }
+        },
+        {
+          "client_id": "384517490162-j0ovm0vnit66i7cbveogrmmgf9t9g0it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6LMcB60WLLF7Y4CyYRCgk9RZzIhrayiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384517490162-j0ovm0vnit66i7cbveogrmmgf9t9g0it.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
