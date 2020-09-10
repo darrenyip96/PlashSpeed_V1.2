@@ -28,6 +28,7 @@ class RegisterActivity : AppCompatActivity() {
 
         fun signUpUser(){
             if(email_register.text.toString().isEmpty()){
+
                 email_register.error = "Please enter email"
                 email_register.requestFocus()
                 return
@@ -88,6 +89,10 @@ class RegisterActivity : AppCompatActivity() {
         register_button.setOnClickListener {
             signUpUser()
         }
+
+     
+
+
 
     }
 
