@@ -42,6 +42,7 @@ class DeliveryActivity:  AppCompatActivity() {
 
         confirm_btn.setOnClickListener{
             saveDetails()
+            onBackPressed();
         }
 
     }

@@ -1,19 +1,13 @@
 package com.example.plashspeed_v12
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.btnCancel
-import kotlinx.android.synthetic.main.activity_register.*
-import java.util.regex.PatternSyntaxException
+
 class PaymentActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
@@ -36,10 +30,11 @@ class PaymentActivity : AppCompatActivity() {
         nameText = findViewById(R.id.nameText)
         cvcText = findViewById(R.id.cvcText)
         paymentButton= findViewById(R.id.paymentButton)
-        cardText = findViewById(R.id.cardText)
+        cardText = findViewById(R.id.card)
 
         paymentButton.setOnClickListener{
             savePaymentMethod()
+            onBackPressed();
         }
 
     }
