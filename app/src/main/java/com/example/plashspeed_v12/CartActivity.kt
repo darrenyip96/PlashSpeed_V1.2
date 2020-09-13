@@ -32,7 +32,7 @@ class CartActivity : AppCompatActivity() {
             }
 
             override fun onDataChange(p0: DataSnapshot) {
-                var sb = StringBuilder()
+               /* var sb = StringBuilder()
                 for (i in p0.children) {
                     var foodName = i.child("FoodName").getValue()
                     var price = i.child("Price").getValue()
@@ -41,7 +41,43 @@ class CartActivity : AppCompatActivity() {
 
                     sb.append("   ${i.key}     $foodName           $price                     $quantity                $total\n")
                 }
-                cartText.setText(sb)
+                cartText.setText(sb)*/
+                var sb1 = StringBuilder()
+                for (i in p0.children) {
+                    var foodName = i.child("FoodName").getValue()
+
+                    sb1.append("      $foodName \n \n")
+                }
+                cartText.setText(sb1)
+
+                var sb2 = StringBuilder()
+                for (i in p0.children) {
+
+                    var price = i.child("Price").getValue()
+
+                    sb2.append("            $price \n \n")
+                }
+                priceText.setText(sb2)
+
+                var sb3 = StringBuilder()
+                for (i in p0.children) {
+
+                    var quantity = i.child("Quantity").getValue()
+
+
+                    sb3.append("               $quantity \n \n")
+                }
+                quanText.setText(sb3)
+
+                var sb4 = StringBuilder()
+                for (i in p0.children) {
+
+                    var total = i.child("Total").getValue()
+
+                    sb4.append("           $total\n \n")
+                }
+                totalText.setText(sb4)
+
             }
 
         }
