@@ -14,6 +14,7 @@
         <activity android:name=".DeliveryActivity"></activity>
         <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".AboutusActivity"></activity>
+        <activity android:name=".OrderActivity"></activity>
         <activity android:name=".CartActivity">
 
         </activity>
@@ -25,7 +26,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
