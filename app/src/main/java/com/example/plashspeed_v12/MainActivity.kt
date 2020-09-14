@@ -63,10 +63,8 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email_et.text.toString(), password_et.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, ProfileActivity::class.java)
+                    val intent = Intent(this, RestaurantActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(baseContext, "Login successful.",
-                        Toast.LENGTH_SHORT).show()
                     val user = auth.currentUser
                     updateUI(user)
                 } else {
@@ -80,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?) {
         if(currentUser != null){
-            Toast.makeText(baseContext, "Login successful.",
+            Toast.makeText(baseContext, "Login succeed.",
                 Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(baseContext, "Login failed.",
