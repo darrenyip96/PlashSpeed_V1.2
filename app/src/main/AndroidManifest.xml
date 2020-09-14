@@ -18,9 +18,6 @@
         <activity android:name=".AboutusActivity"></activity>
         <activity android:name=".OrderActivity"></activity>
         <activity android:name=".RestaurantActivity">
-
-        </activity>
-        <activity android:name=".NavigationMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email_et.text.toString(), password_et.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, NavigationMain::class.java)
+                    val intent = Intent(this, RestaurantActivity::class.java)
                     startActivity(intent)
                     val user = auth.currentUser
                     updateUI(user)
