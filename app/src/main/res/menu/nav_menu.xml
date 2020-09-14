@@ -10,6 +10,14 @@
         android:icon = "@drawable/ic_baseline_home"
         android:title="Home" />
     <item
+        android:id = "@+id/orderMenu"
+        android:icon = "@drawable/ic_order"
+        android:title="Order" />
+    <item
+        android:id = "@+id/cartMenu"
+        android:icon = "@drawable/ic_shopping_cart"
+        android:title="Cart" />
+    <item
         android:id = "@+id/helpMessage2"
         android:icon = "@drawable/ic_baseline_help"
         android:title="Help" />

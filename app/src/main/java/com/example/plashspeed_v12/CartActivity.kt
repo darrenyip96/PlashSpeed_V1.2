@@ -3,11 +3,14 @@ package com.example.plashspeed_v12
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -132,6 +135,41 @@ class CartActivity : AppCompatActivity() {
             builder.show()
 
         }
+
+        //bottom navigation bar
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.selectedItemId = R.id.cartMenu
+        bottomNavigationView.setOnNavigationItemSelectedListener(object:
+            BottomNavigationView.OnNavigationItemSelectedListener {
+            override fun onNavigationItemSelected(@NonNull menuItem: MenuItem):Boolean {
+                when (menuItem.itemId) {
+                    R.id.profileActivity2 -> {
+                        startActivity(Intent(applicationContext, ProfileActivity::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
+                    R.id.homePage2 -> {
+                        startActivity(Intent(applicationContext, RestaurantActivity::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
+                    R.id.orderMenu -> {
+                        startActivity(Intent(applicationContext, OrderActivity::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
+                    R.id.cartMenu -> {
+                        return true
+                    }
+                    R.id.helpMessage2 -> {
+                        startActivity(Intent(applicationContext, HelpMessage::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
+                }
+                return false
+            }
+        })
 
     }
 

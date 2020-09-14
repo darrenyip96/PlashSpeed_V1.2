@@ -41,6 +41,16 @@ class ProfileActivity : AppCompatActivity() {
                         overridePendingTransition(0, 0)
                         return true
                     }
+                    R.id.orderMenu -> {
+                        startActivity(Intent(applicationContext, OrderActivity::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
+                    R.id.cartMenu -> {
+                        startActivity(Intent(applicationContext, CartActivity::class.java))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
                     R.id.helpMessage2 -> {
                         startActivity(Intent(applicationContext, HelpMessage::class.java))
                         overridePendingTransition(0, 0)
