@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/speed_nav"
+    app:startDestination="@id/helpMessage2">
+    <activity
+        android:id="@+id/homePage2"
+        android:name="com.example.plashspeed_v12.HomePage"
+        android:label="homepage"
+        tools:layout="@layout/homepage" />
+    <activity
+        android:id="@+id/helpMessage2"
+        android:name="com.example.plashspeed_v12.HelpMessage"
+        android:label="help_page"
+        tools:layout="@layout/help_page" />
+    <activity
+        android:id="@+id/profileActivity2"
+        android:name="com.example.plashspeed_v12.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>
