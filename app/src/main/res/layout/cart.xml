@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -28,7 +30,7 @@
         android:id="@+id/Border"
         android:layout_width="409dp"
         android:layout_height="47dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="5dp"
         android:background="#232121"
 
         android:text="       Food Name                        Price(RM)         Quantity          Total"
@@ -40,10 +42,11 @@
     <TextView
         android:id="@+id/cartText"
         android:layout_width="165dp"
-        android:layout_height="115dp"
+        android:layout_height="166dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:text="  "
         android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/priceText"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,28 +57,28 @@
         android:layout_width="202dp"
         android:layout_height="61dp"
         android:gravity="center"
-        android:text="Payment Method"
+        android:text="Payment Method :"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="205dp"
         android:layout_height="64dp"
         android:gravity="center"
-        android:text="Delivery details"
+        android:text="Delivery details :"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -87,10 +90,10 @@
         android:minWidth="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.995"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.625" />
 
     <Button
         android:id="@+id/btnaddress"
@@ -102,32 +105,30 @@
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759" />
+        app:layout_constraintVertical_bias="0.753" />
 
     <Button
         android:id="@+id/btnOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginLeft="154dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginRight="169dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="118dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/colorAccent"
         android:text="Place Order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/priceText"
-        android:layout_width="84dp"
-        android:layout_height="116dp"
+        android:layout_width="88dp"
+        android:layout_height="167dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:text="  "
         android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/quanText"
         app:layout_constraintStart_toEndOf="@+id/cartText"
@@ -135,11 +136,12 @@
 
     <TextView
         android:id="@+id/quanText"
-        android:layout_width="80dp"
-        android:layout_height="116dp"
+        android:layout_width="79dp"
+        android:layout_height="169dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="16dp"
+        android:text="  "
         android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/totalText"
         app:layout_constraintStart_toEndOf="@+id/priceText"
@@ -147,9 +149,10 @@
 
     <TextView
         android:id="@+id/totalText"
-        android:layout_width="81dp"
-        android:layout_height="116dp"
+        android:layout_width="76dp"
+        android:layout_height="170dp"
         android:layout_marginTop="16dp"
+        android:text=" "
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/quanText"
@@ -159,7 +162,7 @@
         android:id="@+id/divider7"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="284dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
@@ -169,7 +172,7 @@
         android:id="@+id/textView29"
         android:layout_width="411dp"
         android:layout_height="47dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="188dp"
         android:background="#C6C1C1"
         android:gravity="center"
         android:text="Payment and Delivery Details"
@@ -190,5 +193,17 @@
         app:layout_constraintHorizontal_bias="0.992"
         app:layout_constraintStart_toEndOf="parent"
         app:menu="@menu/nav_menu" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="117dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/Red"
+        android:text="Clear Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

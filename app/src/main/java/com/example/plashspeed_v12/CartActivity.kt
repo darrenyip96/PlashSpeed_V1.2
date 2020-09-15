@@ -134,7 +134,7 @@ class CartActivity : AppCompatActivity() {
                 val selectedItem = spinner.selectedItem.toString()
 
                 if (selectedItem == "Credit/Debit card") {
-                    val intent = Intent(this@CartActivity, PaymentActivity::class.java)
+                    val intent = Intent(this@CartActivity, PaymentMethod::class.java)
                     startActivity(intent)
 
                 } else if (selectedItem == "Cash on Delivery") {
@@ -150,6 +150,22 @@ class CartActivity : AppCompatActivity() {
 
 
         }
+        val builder1 = AlertDialog.Builder(this)
+        btnClear.setOnClickListener {
+            builder1.setTitle("Order Cleared")
+            builder1.setMessage("Please order again and sorry for the inconvenient")
+            builder1.setCancelable(true)
+            builder1.setPositiveButton(
+                "OK",
+                DialogInterface.OnClickListener { dialogInterface: DialogInterface, i: Int ->
+                    startActivity(intent)
+
+                })
+
+            builder1.show()
+            deleteCart()
+        }
+
 
         val builder = AlertDialog.Builder(this)
         btnOrder.setOnClickListener {
