@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +16,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.cart.*
-import kotlinx.android.synthetic.main.help_page.*
+
 
 class CartActivity : AppCompatActivity() {
 
@@ -25,6 +25,18 @@ class CartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cart)
+
+        fun deleteCart(){
+
+
+            val ref = FirebaseDatabase.getInstance().reference.child("test")
+            ref.removeValue()
+
+
+        }
+
+
+
 
 
         var database = FirebaseDatabase.getInstance().reference.child("Cart")
@@ -68,7 +80,7 @@ class CartActivity : AppCompatActivity() {
                     var quantity = i.child("Quantity").getValue()
 
 
-                    sb3.append("               $quantity \n \n")
+                    sb3.append("            $quantity \n \n")
                 }
                 quanText.setText(sb3)
 
@@ -119,6 +131,7 @@ class CartActivity : AppCompatActivity() {
             val intent = Intent(this, DeliveryActivity::class.java)
             startActivity(intent)
 
+
         }
 
         val builder = AlertDialog.Builder(this)
@@ -130,11 +143,14 @@ class CartActivity : AppCompatActivity() {
                 "OK",
                 DialogInterface.OnClickListener { dialogInterface: DialogInterface, i: Int ->
                     startActivity(intent)
+
                 })
 
             builder.show()
-
+            deleteCart()
         }
+
+
 
         //bottom navigation bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

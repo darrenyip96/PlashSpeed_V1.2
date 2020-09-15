@@ -41,7 +41,7 @@
         android:id="@+id/cartText"
         android:layout_width="165dp"
         android:layout_height="115dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:textSize="16dp"
@@ -61,7 +61,7 @@
         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintVertical_bias="0.598" />
 
     <TextView
         android:id="@+id/textView26"
@@ -72,15 +72,15 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.754" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="174dp"
-        android:layout_height="78dp"
+        android:layout_width="168dp"
+        android:layout_height="59dp"
 
         android:dropDownWidth="wrap_content"
         android:gravity="center|center_horizontal"
@@ -90,19 +90,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintVertical_bias="0.596" />
 
     <Button
         android:id="@+id/btnaddress"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
+        android:layout_width="128dp"
+        android:layout_height="49dp"
         android:text="Set Address"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintVertical_bias="0.759" />
 
     <Button
         android:id="@+id/btnOrder"
@@ -112,10 +112,11 @@
         android:layout_marginLeft="154dp"
         android:layout_marginEnd="169dp"
         android:layout_marginRight="169dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="68dp"
         android:text="Place Order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -124,9 +125,10 @@
         android:layout_height="116dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/quanText"
         app:layout_constraintStart_toEndOf="@+id/cartText"
         app:layout_constraintTop_toBottomOf="@+id/Border" />
@@ -137,7 +139,8 @@
         android:layout_height="116dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/totalText"
         app:layout_constraintStart_toEndOf="@+id/priceText"
         app:layout_constraintTop_toBottomOf="@+id/Border" />
@@ -146,7 +149,8 @@
         android:id="@+id/totalText"
         android:layout_width="81dp"
         android:layout_height="116dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/quanText"
         app:layout_constraintTop_toBottomOf="@+id/Border" />
@@ -155,23 +159,23 @@
         android:id="@+id/divider7"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="260dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-1dp" />
+        tools:layout_editor_absoluteX="4dp" />
 
     <TextView
         android:id="@+id/textView29"
         android:layout_width="411dp"
         android:layout_height="47dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="148dp"
         android:background="#C6C1C1"
         android:gravity="center"
         android:text="Payment and Delivery Details"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Border" />
 
@@ -179,10 +183,11 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.992"
         app:layout_constraintStart_toEndOf="parent"
         app:menu="@menu/nav_menu" />
 
