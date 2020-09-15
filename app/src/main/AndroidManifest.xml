@@ -26,6 +26,7 @@
         <activity android:name=".OrderActivity"></activity>
         <activity android:name=".PaymentMethod"></activity>
         <activity android:name=".FoodListActivity"></activity>
+        <activity android:name=".SelectedFoodActivity"></activity>
         <activity android:name=".RestaurantActivity">
 
         </activity>

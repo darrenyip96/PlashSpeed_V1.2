@@ -66,5 +66,24 @@ class FoodListActivity:AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this)
+    }
+
+    override fun onStop() {
+        EventBus.getDefault().unregister(this)
+        super.onStop()
+    }
+
+    @Subscribe(sticky=true,threadMode = ThreadMode.MAIN)
+    fun onFoodSelected(event:FoodClick){
+        if(event.isSuccess){
+            //Toast.makeText(this,"Click to "+event.restaurant.rName,Toast.LENGTH_SHORT).show()
+            startActivity(Intent(applicationContext, SelectedFoodActivity::class.java))
+            overridePendingTransition(0, 0)
+        }
+    }
+
 
 }
