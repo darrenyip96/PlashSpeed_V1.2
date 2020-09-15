@@ -30,11 +30,11 @@ class PaymentActivity : AppCompatActivity() {
         nameText = findViewById(R.id.nameText)
         cvcText = findViewById(R.id.cvcText)
         paymentButton= findViewById(R.id.paymentButton)
-        cardText = findViewById(R.id.card)
+        cardText = findViewById(R.id.cardText)
 
         paymentButton.setOnClickListener{
             savePaymentMethod()
-            onBackPressed();
+            onBackPressed()
         }
 
     }
@@ -68,6 +68,8 @@ class PaymentActivity : AppCompatActivity() {
 
         ref.child(name).setValue(methods).addOnCompleteListener{
             Toast.makeText(applicationContext, "Payment Method Saved Successfully", Toast.LENGTH_LONG).show()
+
+
         }
 
 

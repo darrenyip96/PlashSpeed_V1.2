@@ -42,7 +42,9 @@ class DeliveryActivity:  AppCompatActivity() {
 
         confirm_btn.setOnClickListener{
             saveDetails()
-            onBackPressed();
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+
         }
 
     }

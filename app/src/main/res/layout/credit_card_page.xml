@@ -121,7 +121,7 @@
         android:layout_marginTop="12dp"
         android:text="CVC/CW"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintTop_toBottomOf="@+id/cardText"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -135,7 +135,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/card"
+        android:id="@+id/cardText"
         android:layout_width="354dp"
         android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
