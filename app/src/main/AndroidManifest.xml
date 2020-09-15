@@ -18,15 +18,16 @@
         <activity android:name=".AboutusActivity"></activity>
         <activity android:name=".OrderActivity"></activity>
         <activity android:name=".PaymentMethod"></activity>
+        <activity android:name=".FoodListActivity"></activity>
         <activity android:name=".RestaurantActivity">
-
-        </activity>
-        <activity android:name=".CartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".CartActivity">
+
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
