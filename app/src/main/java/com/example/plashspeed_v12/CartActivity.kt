@@ -35,6 +35,23 @@ class CartActivity : AppCompatActivity() {
 
         }
 
+        fun saveToOrder(){
+            val orderstatus = "Delivered"
+
+            val refref = FirebaseDatabase.getInstance().getReference("Orders")
+
+            //val orderid = refref.push().key
+
+            val idid = (0..999).random()
+
+            val orderid = idid.toString()
+
+            val orderdetails = OrderSummary(orderid,orderstatus)
+
+            refref.child(orderid).setValue(orderdetails)
+
+        }
+
 
 
 
@@ -147,6 +164,7 @@ class CartActivity : AppCompatActivity() {
                 })
 
             builder.show()
+            saveToOrder()
             deleteCart()
         }
 
