@@ -26,6 +26,11 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        imgView1.setOnClickListener {
+            val intent = Intent(this, AboutusActivity::class.java)
+            startActivity(intent)
+        }
+
         //bottom navigation bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.selectedItemId = R.id.profileActivity2
