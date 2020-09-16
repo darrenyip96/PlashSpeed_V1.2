@@ -48,6 +48,12 @@ class FoodListAdapter(var foodListItems: List<ProductModel>):RecyclerView.Adapte
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as FoodViewHolder).bind(foodListItems[position])
 
+        holder.setListener(object:RestaurantItemClickListener{
+            override fun onItemClick(view: View, pos: Int) {
+                ComObject.foodSelected=foodListItems.get(pos)
+                EventBus.getDefault().postSticky(FoodClick(true,foodListItems.get(pos)))
+            }
+        })
 
     }
 }
