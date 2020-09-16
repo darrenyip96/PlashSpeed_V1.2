@@ -66,9 +66,9 @@ class PaymentActivity : AppCompatActivity() {
 
         val methods = paymentClass(vsmc, name, card, cvc)
 
-        ref.child(name).setValue(methods).addOnCompleteListener{
+        ref.child(cvc).setValue(methods).addOnCompleteListener{
             Toast.makeText(applicationContext, "Payment Method Saved Successfully", Toast.LENGTH_LONG).show()
-
+            onBackPressed()
 
         }
 

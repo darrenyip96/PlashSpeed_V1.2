@@ -38,14 +38,22 @@ class PaymentMethod: AppCompatActivity() {
                 var sb1 = StringBuilder()
                 for (i in p0.children) {
                     var name = i.child("name").getValue()
-                    var card = i.child("cvc").getValue()
+                    var card = i.child("card").getValue()
 
-                    sb1.append("           $name                       $card \n \n \n" )
+                    sb1.append("           $name  \n \n \n" )
 
                 }
                 banktext.setText(sb1)
 
+                var sb2 = StringBuilder()
+                for (i in p0.children) {
+                    var name = i.child("name").getValue()
+                    var card = i.child("card").getValue()
 
+                    sb2.append("     $card \n \n \n" )
+
+                }
+                banktext2.setText(sb2)
 
             }
 
@@ -60,7 +68,17 @@ class PaymentMethod: AppCompatActivity() {
         }
 
         banktext.setOnClickListener {
-           onBackPressed()
+
+
+
+            onBackPressed()
+        }
+
+        banktext2.setOnClickListener {
+
+
+
+            onBackPressed()
         }
 
 

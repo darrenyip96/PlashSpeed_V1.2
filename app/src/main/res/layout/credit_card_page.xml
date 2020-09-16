@@ -118,10 +118,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginRight="320dp"
         android:text="CVC/CW"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardText"
+        app:layout_constraintTop_toBottomOf="@+id/cvcText"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -139,8 +142,9 @@
         android:layout_width="354dp"
         android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -148,9 +152,9 @@
         android:layout_width="354dp"
         android:layout_height="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
         tools:ignore="MissingConstraints" />
 
     <Button

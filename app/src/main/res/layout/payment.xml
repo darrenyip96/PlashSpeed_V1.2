@@ -11,6 +11,24 @@
 
 
     <TextView
+        android:id="@+id/banktext2"
+        android:layout_width="199dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="169dp"
+        android:text="  "
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+        app:layout_constraintVertical_bias="0.279" />
+
+    <TextView
         android:id="@+id/headerTextView"
         android:layout_width="411dp"
         android:layout_height="42dp"
@@ -41,7 +59,7 @@
         android:layout_marginLeft="42dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="204dp"
         android:text="   +  Add New Bank Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,17 +69,19 @@
 
     <TextView
         android:id="@+id/banktext"
-        android:layout_width="414dp"
-        android:layout_height="351dp"
+        android:layout_width="211dp"
+        android:layout_height="341dp"
         android:layout_marginTop="85dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:layout_marginBottom="169dp"
         android:text="  "
         app:layout_constraintBottom_toTopOf="@+id/btnAdd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintEnd_toStartOf="@+id/banktext2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerTextView"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.278" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

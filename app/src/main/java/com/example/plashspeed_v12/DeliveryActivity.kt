@@ -42,8 +42,7 @@ class DeliveryActivity:  AppCompatActivity() {
 
         confirm_btn.setOnClickListener{
             saveDetails()
-            val intent = Intent(this, CartActivity::class.java)
-            startActivity(intent)
+
 
         }
 
@@ -78,7 +77,8 @@ class DeliveryActivity:  AppCompatActivity() {
         ref.child(name).setValue(details).addOnCompleteListener{
             Toast.makeText(applicationContext, "Details saved successfully", Toast.LENGTH_LONG).show()
         }
-
+        val intent = Intent(this, CartActivity::class.java)
+        startActivity(intent)
 
     }
 }
