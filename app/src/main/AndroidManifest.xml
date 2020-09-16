@@ -13,11 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".HelpMessage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".DeliveryActivity"></activity>
@@ -28,7 +24,11 @@
         <activity android:name=".FoodListActivity"></activity>
         <activity android:name=".SelectedFoodActivity"></activity>
         <activity android:name=".RestaurantActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".CartActivity">
 

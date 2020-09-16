@@ -66,10 +66,16 @@ class SelectedFoodActivity:AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("Cart")
 
         //val detailsid = ref.push().key
-        val details = DeliveryDetails(FoodName, Price, Quantity, Total)
+        val details = SaveCartDetails(FoodName, Price, Quantity, Total)
 
-        ref.child(Total).setValue(details).addOnCompleteListener{
+
+        val cartidid = (0..999).random()
+
+        val cartid = cartidid.toString()
+        ref.child(cartid).setValue(details).addOnCompleteListener{
             Toast.makeText(applicationContext, "Saved to cart successfully", Toast.LENGTH_LONG).show()
+            startActivity(Intent(applicationContext, RestaurantActivity::class.java))
+            overridePendingTransition(0, 0)
         }
 
 
