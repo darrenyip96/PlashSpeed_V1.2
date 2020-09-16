@@ -29,7 +29,7 @@ class CartActivity : AppCompatActivity() {
         fun deleteCart(){
 
 
-            val ref = FirebaseDatabase.getInstance().reference.child("test")
+            val ref = FirebaseDatabase.getInstance().reference.child("Cart")
             ref.removeValue()
 
 
@@ -76,7 +76,7 @@ class CartActivity : AppCompatActivity() {
                 cartText.setText(sb)*/
                 var sb1 = StringBuilder()
                 for (i in p0.children) {
-                    var foodName = i.child("FoodName").getValue()
+                    var foodName = i.child("foodName").getValue()
 
                     sb1.append("      $foodName \n \n")
                 }
@@ -85,7 +85,7 @@ class CartActivity : AppCompatActivity() {
                 var sb2 = StringBuilder()
                 for (i in p0.children) {
 
-                    var price = i.child("Price").getValue()
+                    var price = i.child("price").getValue()
 
                     sb2.append("            $price \n \n")
                 }
@@ -94,7 +94,7 @@ class CartActivity : AppCompatActivity() {
                 var sb3 = StringBuilder()
                 for (i in p0.children) {
 
-                    var quantity = i.child("Quantity").getValue()
+                    var quantity = i.child("quantity").getValue()
 
 
                     sb3.append("            $quantity \n \n")
@@ -104,7 +104,7 @@ class CartActivity : AppCompatActivity() {
                 var sb4 = StringBuilder()
                 for (i in p0.children) {
 
-                    var total = i.child("Total").getValue()
+                    var total = i.child("total").getValue()
 
                     sb4.append("           $total\n \n")
                 }
