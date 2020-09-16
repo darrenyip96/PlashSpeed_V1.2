@@ -105,8 +105,8 @@ class RestaurantActivity:AppCompatActivity() {
     fun onCategorySelected(event:RestaurantClick){
         if(event.isSuccess){
             //Toast.makeText(this,"Click to "+event.restaurant.rName,Toast.LENGTH_SHORT).show()
-            startActivity(Intent(applicationContext, FoodListActivity::class.java))
-            overridePendingTransition(0, 0)
+            val intent = Intent(this, FoodListActivity::class.java)
+            startActivity(intent)
         }
     }
 }

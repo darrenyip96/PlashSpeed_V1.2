@@ -40,7 +40,7 @@ class FoodListActivity:AppCompatActivity() {
 
 
         backbutton.setOnClickListener {
-            onDestroy()
+            super.onBackPressed()
         }
 
 
