@@ -1,6 +1,7 @@
 package com.example.plashspeed_v12
 
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -105,10 +106,14 @@ class RestaurantActivity:AppCompatActivity() {
     fun onCategorySelected(event:RestaurantClick){
         if(event.isSuccess){
             //Toast.makeText(this,"Click to "+event.restaurant.rName,Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, FoodListActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(applicationContext, FoodListActivity::class.java))
+
         }
     }
+
+
+
+
 }
 
 

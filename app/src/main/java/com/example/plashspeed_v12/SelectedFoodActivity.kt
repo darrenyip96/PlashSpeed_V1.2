@@ -54,7 +54,12 @@ class SelectedFoodActivity:AppCompatActivity() {
         }
 
         btnBack.setOnClickListener{
-            super.onBackPressed()
+            EventBus.getDefault().removeAllStickyEvents()
+
+            val intent = Intent(applicationContext, RestaurantActivity::class.java)
+            //intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            //intent.putExtra("EXIT", true)
+            startActivity(intent)
         }
 
 

@@ -10,7 +10,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.restaurant_foods.*
-import kotlinx.android.synthetic.main.restaurant_foods.backbutton
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -40,7 +39,11 @@ class FoodListActivity:AppCompatActivity() {
 
 
         backbutton.setOnClickListener {
-            super.onBackPressed()
+            EventBus.getDefault().removeAllStickyEvents()
+
+            val intent = Intent(applicationContext, RestaurantActivity::class.java)
+            startActivity(intent)
+
         }
 
 
@@ -84,6 +87,8 @@ class FoodListActivity:AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
     }
+
+
 
 
 }
