@@ -48,7 +48,14 @@ class SelectedFoodActivity:AppCompatActivity() {
 
         btnAddtoCart.setOnClickListener{
             saveToCart()
+            onDestroy()
+
         }
+
+        btnBack.setOnClickListener{
+            onDestroy()
+        }
+
 
 
     }
@@ -74,8 +81,8 @@ class SelectedFoodActivity:AppCompatActivity() {
         val cartid = cartidid.toString()
         ref.child(cartid).setValue(details).addOnCompleteListener{
             Toast.makeText(applicationContext, "Saved to cart successfully", Toast.LENGTH_LONG).show()
-            startActivity(Intent(applicationContext, RestaurantActivity::class.java))
-            overridePendingTransition(0, 0)
+            val intent = Intent(this, RestaurantActivity::class.java)
+            startActivity(intent)
         }
 
 
