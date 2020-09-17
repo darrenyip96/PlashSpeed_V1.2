@@ -3,26 +3,14 @@ package com.example.plashspeed_v12
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.tasks.Task
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.QuerySnapshot
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.food_details.*
-import kotlinx.android.synthetic.main.food_item.view.*
-import kotlinx.android.synthetic.main.restaurant_foods.*
 import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
+
 
 class SelectedFoodActivity:AppCompatActivity() {
 
@@ -31,6 +19,8 @@ class SelectedFoodActivity:AppCompatActivity() {
 
     private var foodList: List<ProductModel> = ArrayList()
     private val foodListAdapter: FoodListAdapter = FoodListAdapter(foodList)
+    //var user = FirebaseAuth.getInstance().currentUser
+    //val userEmail = user?.email
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,10 +36,12 @@ class SelectedFoodActivity:AppCompatActivity() {
         selected_food_price.text = ComObject.foodSelected!!.price.toString()
         Picasso.with(this).load(ComObject.foodSelected!!.picture).into(selected_food_image)
 
+        //txtUserEmail.text = userEmail
+
         btnAddtoCart.setOnClickListener{
             saveToCart()
-            val intent = Intent(this, CartActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, CartActivity::class.java)
+            //startActivity(intent)
 
         }
 
@@ -86,9 +78,10 @@ class SelectedFoodActivity:AppCompatActivity() {
 
         val cartid = cartidid.toString()
         ref.child(cartid).setValue(details).addOnCompleteListener{
-            Toast.makeText(applicationContext, "Saved to cart successfully", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, CartActivity::class.java)
-            startActivity(intent)
+                Toast.makeText(applicationContext, "Saved to cart successfully", Toast.LENGTH_LONG).show()
+                //val intent = Intent(this, CartActivity::class.java)
+                //startActivity(intent)
+
         }
 
 

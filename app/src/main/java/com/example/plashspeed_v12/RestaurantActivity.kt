@@ -24,9 +24,12 @@ class RestaurantActivity:AppCompatActivity() {
 
 
     private val firebaseFirestore: FirebaseFirestore = FirebaseFirestore.getInstance()
+    var user = FirebaseAuth.getInstance().currentUser
+    val userEmail = user?.email
 
     private var restaurantList: List<RestaurantModel> = ArrayList()
     private val restaurantListAdapter:RestaurantListAdapter = RestaurantListAdapter(restaurantList)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,8 @@ class RestaurantActivity:AppCompatActivity() {
 
         home_restaurants_list.layoutManager = LinearLayoutManager(this)
         home_restaurants_list.adapter = restaurantListAdapter
+
+        txtUserEmail.text = userEmail
 
         //bottom navigation bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
